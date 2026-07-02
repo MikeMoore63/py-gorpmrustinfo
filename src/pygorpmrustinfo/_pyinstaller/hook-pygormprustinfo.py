@@ -1,7 +1,6 @@
-from PyInstaller.utils.hooks import collect_dynamic_libs
-from distutils.sysconfig import get_config_var
-from pathlib import Path
 import os
+from pathlib import Path
+from sysconfig import get_config_var
 
 here = Path(__file__).absolute().parent.parent
 print(here)
