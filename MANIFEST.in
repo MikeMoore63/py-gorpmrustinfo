@@ -1,0 +1,7 @@
+include README.md
+include *.go go.mod go.sum
+include LICENSE
+include get_go_info
+include get_rpm_info
+include get_rust_audit
+recursive-include src *.py *.go
