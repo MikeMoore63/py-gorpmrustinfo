@@ -4,7 +4,7 @@ pygorpmrustinfo is a unified Python package that exposes the former rpmdb, rust 
 
 ## Why this package exists
 
-The older split packages each relied on their own Go runtime and native extension. That approach is fragile in Python environments because Go's `c-shared` mode can be unstable when multiple Go runtimes are loaded into the same process. This is the problem described in Go issue #65050: loading multiple `c-shared` Go libraries in one process can lead to panics, crashes, or other runtime failures.
+The older split packages each relied on their own Go runtime and native extension. That approach is fragile in Python environments because Go's `c-shared` mode can be unstable when multiple Go runtimes are loaded into the same process. This is the problem described in [Go issue #65050](https://go.dev/issue/65050): loading multiple `c-shared` Go libraries in one process can lead to panics, crashes, or other runtime failures.
 
 This consolidation is meant to reduce that risk by keeping a single Go runtime in play, while also reducing memory usage compared with loading several separate native extensions.
 
@@ -151,5 +151,5 @@ For dependency declarations, update requirements, `pyproject.toml`, `setup.cfg`,
 ## Notes
 
 - The consolidation is primarily a stability and resource-usage improvement.
-- It is also a practical mitigation for the risks documented in Go issue #65050.
+- It is also a practical mitigation for the risks documented in [Go issue #65050](https://go.dev/issue/65050).
 - If you are maintaining older automation, consider switching to the unified package now so you are not tied to the deprecated script-based workflow.
