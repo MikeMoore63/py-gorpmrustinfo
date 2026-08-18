@@ -1,7 +1,7 @@
 # Install the current Go release
 param(
     [string]$w='c:\go',
-    [string]$v='1.26.4'
+    [string]$v='1.26.6'
 )
 Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope CurrentUser
 $OutputVariable = (go version) | Out-String
