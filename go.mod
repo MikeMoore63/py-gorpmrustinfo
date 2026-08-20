@@ -7,7 +7,7 @@ require (
 	github.com/jinzhu/copier v0.4.0
 	github.com/knqyf263/go-rpmdb v0.1.1
 	github.com/rust-secure-code/go-rustaudit v0.0.0-20250226111315-e20ec32e963c
-	golang.org/x/mod v0.38.0
+	golang.org/x/mod v0.40.0
 )
 
 require (
